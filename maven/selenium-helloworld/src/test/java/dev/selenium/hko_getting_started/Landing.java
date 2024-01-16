@@ -39,5 +39,6 @@ public class Landing {
         }
 
         driver.quit();
+
     }
 }
