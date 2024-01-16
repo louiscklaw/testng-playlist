@@ -27,7 +27,7 @@ public class HKOHelloworld {
         Dimension viewportSize = new Dimension(1920, 1080);
         driver.manage().window().setSize(viewportSize);
 
-        driver.get("https://www.example.com");
+        driver.get("https://www.hko.gov.hk");
 
         driver.getTitle();
 
@@ -37,7 +37,7 @@ public class HKOHelloworld {
 
         try {
             // Specify the location where you want to save the screenshot
-            String destinationPath = "./screenshot.png";
+            String destinationPath = "./hko_org_helloworld.png";
             FileUtils.copyFile(screenshotFile, new File(destinationPath));
             System.out.println("Screenshot saved successfully.");
         } catch (IOException e) {

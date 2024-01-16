@@ -11,13 +11,14 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
 import java.io.IOException;
 import java.time.Duration;
 
 @Test()
-public class SeleniumHelloworld {
+public class HKOHelloworldHoverWeather {
 
     @Test()
     public void test() {
@@ -27,17 +28,27 @@ public class SeleniumHelloworld {
         Dimension viewportSize = new Dimension(1920, 1080);
         driver.manage().window().setSize(viewportSize);
 
-        driver.get("https://www.example.com");
+        driver.get("https://www.hko.gov.hk");
 
         driver.getTitle();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(500));
 
+        WebElement ele = driver.findElement(By.cssSelector("li.firstLi"));
+        // WebElement ele = driver.findElement(By.class('li.firstLi'));
+
+        // Creating object of an Actions class
+        Actions action = new Actions(driver);
+
+        // Performing the mouse hover action on the target element.
+        action.moveToElement(ele).perform();
+
+        // done, take screencapture
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
         try {
             // Specify the location where you want to save the screenshot
-            String destinationPath = "./example_com_screenshot.png";
+            String destinationPath = "./hover_weather_helloworld.png";
             FileUtils.copyFile(screenshotFile, new File(destinationPath));
             System.out.println("Screenshot saved successfully.");
         } catch (IOException e) {
