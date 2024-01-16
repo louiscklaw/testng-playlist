@@ -2,6 +2,7 @@
 *del
 *old
 *bak
+*lck
 
 # Created by https://www.toptal.com/developers/gitignore/api/java,maven,gradle
 # Edit at https://www.toptal.com/developers/gitignore?templates=java,maven,gradle
