@@ -7,7 +7,7 @@ public class SampleTest {
     @DataProvider
     public Object[][] data() {
 
-        return new String[][] {new String[] {"data1"}, new String[] {"data2"}};
+        return new String[][] { new String[] { "data1" }, new String[] { "data2" } };
     }
 
     @Test(dataProvider = "data")
