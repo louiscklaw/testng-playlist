@@ -17,7 +17,7 @@ import java.io.IOException;
 import java.time.Duration;
 
 @Test()
-public class SeleniumHelloworld {
+public class HKOHelloworld {
 
     @Test()
     public void test() {
